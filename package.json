@@ -1,11 +1,31 @@
 {
-  "name": "rss-reader",
+  "name": "@raul72/rss-reader-node-swagger",
+  "title": "RSS Reader",
+  "description": "RSS Reader",
   "version": "0.0.1",
-  "private": true,
-  "description": "New Swagger API Project",
+  "homepage": "https://github.com/raul72/rss-reader-node-swagger",
+  "author": {
+    "name": "raul",
+    "email": "raulraat@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/raul72/rss-reader-node-swagger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/raul72/rss-reader-node-swagger/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/raul72/rss-reader-node-swagger/blob/master/LICENSE-MIT"
+    },
+    {
+      "type": "GPL",
+      "url": "https://github.com/raul72/rss-reader-node-swagger/blob/master/LICENSE-GPL"
+    }
+  ],
   "keywords": [],
-  "author": "",
-  "license": "",
   "main": "app.js",
   "dependencies": {
     "express": "^4.12.3",
