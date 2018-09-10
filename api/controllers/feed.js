@@ -1,11 +1,5 @@
-var mysql = require('mysql');
-var config = require('../../config/config.js');
-
-module.exports = {
-  addFeed: addFeed,
-  getFeedById: getFeedById,
-  getFeedItems: getFeedItems,
-};
+const mysql = require("mysql");
+const config = require("../../config/config.js");
 
 function addFeed(req, res) {
   // FIXME: Not Implemented
@@ -13,10 +7,10 @@ function addFeed(req, res) {
 }
 
 function getFeedById(req, res) {
-  var feedId = req.swagger.params.feedId.value || null;
-  var connection = mysql.createConnection(config.database);
+  const feedId = req.swagger.params.feedId.value || null;
+  const connection = mysql.createConnection(config.database);
   connection.connect();
-  var sql = "SELECT * FROM feeds WHERE id = ?";
+  const sql = "SELECT * FROM feeds WHERE id = ?";
   connection.query(sql, [feedId], function (error, results) {
     if (error) {
       console.log("getFeedById failed", error);
@@ -33,14 +27,14 @@ function getFeedById(req, res) {
 
 function getFeedItems(req, res) {
   // FIXME: pagination
-  var feedId = req.swagger.params.feedId.value || null;
+  const feedId = req.swagger.params.feedId.value || null;
   if (!feedId || feedId < 1) {
     res.status(400).json();
     return;
   }
-  var connection = mysql.createConnection(config.database);
+  const connection = mysql.createConnection(config.database);
   connection.connect();
-  var sql = "SELECT * FROM items WHERE feed_id = ?";
+  const sql = "SELECT * FROM items WHERE feed_id = ?";
   connection.query(sql, [feedId], function (error, results) {
     if (error) {
       console.log("getFeedItems failed", error);
@@ -55,3 +49,9 @@ function getFeedItems(req, res) {
   });
   connection.end();
 }
+
+module.exports = {
+  addFeed,
+  getFeedById,
+  getFeedItems,
+};
