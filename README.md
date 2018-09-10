@@ -1,1 +1,1 @@
-# Skeleton project for Swagger
+# Playground for playing with Swagger
