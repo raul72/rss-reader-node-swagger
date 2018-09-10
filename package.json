@@ -28,8 +28,14 @@
   "keywords": [],
   "main": "app.js",
   "dependencies": {
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^2.6.2",
     "express": "^4.12.3",
     "mysql": "^2.16.0",
+    "prettier": "^1.14.2",
     "swagger-express-mw": "^0.1.0"
   },
   "devDependencies": {

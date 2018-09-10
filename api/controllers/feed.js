@@ -11,7 +11,7 @@ function getFeedById(req, res) {
   const connection = mysql.createConnection(config.database);
   connection.connect();
   const sql = "SELECT * FROM feeds WHERE id = ?";
-  connection.query(sql, [feedId], function (error, results) {
+  connection.query(sql, [feedId], (error, results) => {
     if (error) {
       console.log("getFeedById failed", error);
       return;
@@ -35,7 +35,7 @@ function getFeedItems(req, res) {
   const connection = mysql.createConnection(config.database);
   connection.connect();
   const sql = "SELECT * FROM items WHERE feed_id = ?";
-  connection.query(sql, [feedId], function (error, results) {
+  connection.query(sql, [feedId], (error, results) => {
     if (error) {
       console.log("getFeedItems failed", error);
       res.status(500).json();
@@ -53,5 +53,5 @@ function getFeedItems(req, res) {
 module.exports = {
   addFeed,
   getFeedById,
-  getFeedItems,
+  getFeedItems
 };

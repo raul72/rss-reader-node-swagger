@@ -1,6 +1,7 @@
 {
   "extends": [
-    "eslint:recommended"
+    "plugin:prettier/recommended",
+    "eslint-config-airbnb-base"
   ],
   "env": {
     "node": true
@@ -14,6 +15,22 @@
     "linebreak-style": [
       "error",
       "unix"
+    ],
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "comma-dangle": ["error", {
+      "arrays": "always-multiline",
+      "objects": "ignore",
+      "imports": "never",
+      "exports": "never",
+      "functions": "ignore"
+      }
     ],
     "no-console": ["error", {
       "allow": ["log", "warn", "error"]
